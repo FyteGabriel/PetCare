@@ -6,5 +6,4 @@
     <a href="${pageContext.request.contextPath}/delete">Desactivar</a>
     <a href="${pageContext.request.contextPath}/publicidad">Publicidad</a>
     <a href="${pageContext.request.contextPath}/contacto">Contacto</a>
-    <a href="${pageContext.request.contextPath}/login">Ingresar</a>
 </nav>

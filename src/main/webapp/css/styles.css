@@ -62,10 +62,32 @@ a {
     color: var(--secundario);
 }
 
-.usuario-wireframe {
-    padding: 8px 14px;
-    border: 1px dashed var(--linea);
+.buscador-wireframe {
+    display: flex;
+    width: min(360px, 38vw);
+    align-items: center;
+    padding-right: 12px;
+    background: var(--panel);
+    border: 1px solid var(--linea);
     border-radius: 6px;
+}
+
+.buscador-wireframe input {
+    border: 0;
+    outline: 0;
+}
+
+.acciones-cabecera {
+    display: flex;
+    gap: 8px;
+}
+
+.solo-lectores {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
 }
 
 .menu {
@@ -90,6 +112,85 @@ a {
 .contenedor {
     width: min(1100px, 88%);
     margin: 36px auto;
+}
+
+.migas {
+    margin-bottom: 24px;
+    color: var(--secundario);
+    font-size: 14px;
+}
+
+.migas span {
+    padding: 0 8px;
+}
+
+.layout-catalogo {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.barra-lateral {
+    display: grid;
+    gap: 8px;
+    padding: 18px;
+    background: var(--panel);
+    border: 1px solid var(--linea);
+    border-radius: 8px;
+}
+
+.barra-lateral h2,
+.barra-lateral h3 {
+    margin: 0 0 6px;
+}
+
+.barra-lateral a,
+.barra-lateral span {
+    padding: 6px 2px;
+}
+
+.barra-lateral hr {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid var(--linea);
+}
+
+.titulo-listado {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: end;
+    margin-bottom: 22px;
+}
+
+.contador-wireframe {
+    padding: 8px 12px;
+    border: 1px dashed var(--linea);
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.modulos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.modulo-card {
+    padding: 14px;
+    background: var(--panel);
+    border: 1px solid var(--linea);
+    border-radius: 8px;
+}
+
+.modulo-card .imagen-wireframe {
+    min-height: 125px;
+    margin-bottom: 16px;
+}
+
+.modulo-card h2 {
+    margin: 4px 0;
 }
 
 .hero-wireframe,
@@ -151,6 +252,18 @@ h2 {
     cursor: pointer;
 }
 
+.boton-secundario {
+    color: var(--principal);
+    background: transparent;
+    border: 1px solid var(--principal);
+}
+
+.boton-ancho {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
 .tarjetas {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -186,6 +299,91 @@ h2 {
     place-items: center;
 }
 
+/*
+ * Fondo personalizable del login:
+ * agrega tu imagen como src/main/webapp/images/login-fondo.jpg
+ */
+.pagina-login {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 5vw;
+    background-color: #e8ebef;
+    background-image:
+        linear-gradient(rgba(238, 240, 244, 0.88), rgba(238, 240, 244, 0.88)),
+        url("../images/login-fondo.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.login-marco {
+    width: min(1050px, 100%);
+    min-height: 70vh;
+    display: grid;
+    place-items: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.32);
+}
+
+.login-tarjeta {
+    width: min(390px, 100%);
+    text-align: center;
+}
+
+.login-tarjeta h1 {
+    margin: 14px 0 4px;
+    font-size: 25px;
+}
+
+.login-logo {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    margin: 0 auto;
+    place-items: center;
+    border: 2px solid var(--texto);
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.login-formulario {
+    margin-top: 24px;
+    text-align: left;
+}
+
+.login-opciones {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    margin: 4px 0 8px;
+    font-size: 13px;
+}
+
+.recordar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.recordar input {
+    width: auto;
+}
+
+.login-opciones a,
+.registro-enlace a {
+    text-decoration: underline;
+}
+
+.registro-enlace {
+    margin-top: 22px;
+    font-size: 14px;
+}
+
 .formulario-corto {
     width: min(440px, 100%);
 }
@@ -215,7 +413,9 @@ textarea {
     .hero-wireframe,
     .contacto-grid,
     .tarjetas,
-    .publicidad-grid {
+    .publicidad-grid,
+    .layout-catalogo,
+    .modulos-grid {
         grid-template-columns: 1fr;
     }
 
@@ -223,7 +423,17 @@ textarea {
         padding-inline: 4%;
     }
 
-    .usuario-wireframe {
+    .buscador-wireframe {
         display: none;
+    }
+
+    .login-marco {
+        min-height: auto;
+        padding: 32px 20px;
+    }
+
+    .login-opciones {
+        align-items: flex-start;
+        flex-direction: column;
     }
 }

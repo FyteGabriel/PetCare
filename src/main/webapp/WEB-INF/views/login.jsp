@@ -7,25 +7,33 @@
     <title>PetCare - Ingresar</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
 </head>
-<body>
-    <%@ include file="componentes/header.jsp" %>
-    <%@ include file="componentes/menu.jsp" %>
+<body class="pagina-login">
+    <main class="login-marco">
+        <section class="login-tarjeta">
+            <a class="login-logo" href="${pageContext.request.contextPath}/inicio" aria-label="Volver al inicio">+</a>
 
-    <main class="contenedor pagina-centrada">
-        <section class="panel formulario-corto">
-            <span class="etiqueta">Acceso</span>
-            <h1>Iniciar sesión</h1>
-            <p class="texto-secundario">Wireframe del formulario de ingreso.</p>
+            <h1>Inicia sesión en tu cuenta</h1>
+            <p class="texto-secundario">Bienvenido a PetCare. Ingresa tus datos.</p>
 
-            <form>
-                <label for="correo">Correo</label>
-                <input id="correo" name="correo" type="email" placeholder="correo@ejemplo.com">
+            <form class="login-formulario">
+                <label for="correo">Correo electrónico</label>
+                <input id="correo" name="correo" type="email" placeholder="Ingresa tu correo">
 
                 <label for="clave">Contraseña</label>
-                <input id="clave" name="clave" type="password" placeholder="••••••••">
+                <input id="clave" name="clave" type="password" placeholder="Ingresa tu contraseña">
 
-                <button class="boton" type="button">Ingresar</button>
+                <div class="login-opciones">
+                    <label class="recordar">
+                        <input name="recordar" type="checkbox">
+                        Recordarme
+                    </label>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <button class="boton boton-ancho" type="button">Iniciar sesión</button>
             </form>
+
+            <p class="registro-enlace">¿No tienes una cuenta? <a href="#">Regístrate</a></p>
         </section>
     </main>
 </body>
