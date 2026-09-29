@@ -1,0 +1,6 @@
+/.mvn/wrapper/maven-wrapper.jar binary
+/mvnw text eol=lf
+/mvnw.cmd text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.sh text eol=lf
