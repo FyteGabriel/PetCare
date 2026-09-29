@@ -1,4 +1,4 @@
 package com.petcare.service;
 
-// Estructura reservada para el servicio de Mascota.
-
+public class MascotaService implements IMascotaService {
+}

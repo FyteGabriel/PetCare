@@ -1,4 +1,4 @@
 package com.petcare.service;
 
-// Estructura reservada para la interfaz de Servicio.
-
+public interface IServicioService {
+}

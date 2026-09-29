@@ -1,4 +1,4 @@
 package com.petcare.controller;
 
-// Estructura reservada para Servicios.
-
+public class ServicioController {
+}

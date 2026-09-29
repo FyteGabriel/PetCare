@@ -1,4 +1,4 @@
 package com.petcare.service;
 
-// Estructura reservada para el servicio de Categoría.
-
+public class CategoriaService implements ICategoriaService {
+}

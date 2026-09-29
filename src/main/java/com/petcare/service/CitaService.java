@@ -1,4 +1,4 @@
 package com.petcare.service;
 
-// Estructura reservada para el servicio de Cita.
-
+public class CitaService implements ICitaService {
+}

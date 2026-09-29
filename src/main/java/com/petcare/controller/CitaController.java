@@ -1,4 +1,4 @@
 package com.petcare.controller;
 
-// Estructura reservada para Citas.
-
+public class CitaController {
+}

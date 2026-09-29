@@ -1,4 +1,4 @@
 package com.petcare.controller;
 
-// Estructura reservada para Dashboard.
-
+public class DashboardController {
+}

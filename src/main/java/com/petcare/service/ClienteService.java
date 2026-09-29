@@ -1,4 +1,4 @@
 package com.petcare.service;
 
-// Estructura reservada para el servicio de Cliente.
-
+public class ClienteService implements IClienteService {
+}
