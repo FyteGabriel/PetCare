@@ -19,26 +19,17 @@ src/main/webapp/
 ├── css/
 └── WEB-INF/views/
     ├── componentes/
-    ├── cliente-registrar.jsp
-    ├── cliente-listar.jsp
-    ├── cliente-editar.jsp
-    ├── cliente-desactivar.jsp
-    ├── mascota-registrar.jsp
-    ├── mascota-listar.jsp
-    ├── mascota-editar.jsp
-    ├── mascota-desactivar.jsp
-    ├── categoria-registrar.jsp
-    ├── categoria-listar.jsp
-    ├── categoria-editar.jsp
-    ├── categoria-desactivar.jsp
-    ├── servicio-registrar.jsp
-    ├── servicio-listar.jsp
-    ├── servicio-editar.jsp
-    ├── servicio-desactivar.jsp
-    ├── cita-agendar.jsp
-    ├── cita-listar.jsp
-    ├── cita-atender.jsp
-    └── cita-cancelar.jsp
+    ├── create.jsp
+    ├── read.jsp
+    ├── update.jsp
+    └── delete.jsp
 ```
 
-Cada JSP queda reservado para una sola operación. Las pantallas aún no contienen formularios ni lógica.
+Las cuatro vistas CRUD son compartidas por todos los módulos:
+
+- `create.jsp`: registrar clientes, mascotas, categorías y servicios; agendar citas.
+- `read.jsp`: mostrar todos los listados.
+- `update.jsp`: editar registros y atender citas.
+- `delete.jsp`: desactivar registros y cancelar citas.
+
+Cada módulo conserva por separado su Entity, Repository, Interface Service, Service y Controller. Las vistas todavía no contienen formularios ni lógica.
