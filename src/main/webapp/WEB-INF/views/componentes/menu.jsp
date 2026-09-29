@@ -1,4 +1,4 @@
-<nav class="menu" aria-label="Navegación principal">
+<nav class="menu" aria-label="Navegacion principal">
     <a href="${pageContext.request.contextPath}/inicio">Inicio</a>
     <a href="${pageContext.request.contextPath}/create">Registrar</a>
     <a href="${pageContext.request.contextPath}/read">Listar</a>

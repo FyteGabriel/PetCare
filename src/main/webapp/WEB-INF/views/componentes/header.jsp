@@ -4,5 +4,5 @@
         <strong>PetCare</strong>
     </a>
 
-    <a class="boton" href="${pageContext.request.contextPath}/login">Iniciar sesión</a>
+    <a class="boton" href="${pageContext.request.contextPath}/login">Login</a>
 </header>
