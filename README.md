@@ -18,5 +18,27 @@ src/main/java/com/petcare/
 src/main/webapp/
 ├── css/
 └── WEB-INF/views/
-    └── componentes/
+    ├── componentes/
+    ├── cliente-registrar.jsp
+    ├── cliente-listar.jsp
+    ├── cliente-editar.jsp
+    ├── cliente-desactivar.jsp
+    ├── mascota-registrar.jsp
+    ├── mascota-listar.jsp
+    ├── mascota-editar.jsp
+    ├── mascota-desactivar.jsp
+    ├── categoria-registrar.jsp
+    ├── categoria-listar.jsp
+    ├── categoria-editar.jsp
+    ├── categoria-desactivar.jsp
+    ├── servicio-registrar.jsp
+    ├── servicio-listar.jsp
+    ├── servicio-editar.jsp
+    ├── servicio-desactivar.jsp
+    ├── cita-agendar.jsp
+    ├── cita-listar.jsp
+    ├── cita-atender.jsp
+    └── cita-cancelar.jsp
 ```
+
+Cada JSP queda reservado para una sola operación. Las pantallas aún no contienen formularios ni lógica.
