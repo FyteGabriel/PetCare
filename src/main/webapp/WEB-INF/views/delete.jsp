@@ -1,30 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>PetCare - Desactivar</title>
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>PetCare - Desactivar</title><%@ include file="componentes/estilos.jsp" %></head>
 <body>
-    <section id="desactivar-cliente">
-        <%-- Desactivar Cliente --%>
-    </section>
+    <%@ include file="componentes/header.jsp" %><%@ include file="componentes/menu.jsp" %>
+    <main class="contenedor container">
+        <section class="hero"><div><p>Operaciones DELETE</p><h1>Desactivar o cancelar</h1><p>Se conserva el historial; el registro solamente cambia de estado.</p></div><a class="boton secundario" href="${pageContext.request.contextPath}/read">Volver al listado</a></section>
+        <c:if test="${empty clienteEliminar and empty mascotaEliminar and empty categoriaEliminar and empty servicioEliminar and empty citaEliminar}"><p class="mensaje">Selecciona un registro desde la página Listar.</p></c:if>
 
-    <section id="desactivar-mascota">
-        <%-- Desactivar Mascota --%>
-    </section>
-
-    <section id="desactivar-categoria">
-        <%-- Desactivar Categoría --%>
-    </section>
-
-    <section id="desactivar-servicio">
-        <%-- Desactivar Servicio --%>
-    </section>
-
-    <section id="cancelar-cita">
-        <%-- Cancelar Cita --%>
-    </section>
-</body>
+        <c:if test="${not empty clienteEliminar}"><section class="panel"><h2>Desactivar cliente</h2><p>¿Deseas desactivar a <strong><c:out value="${clienteEliminar.nombre}"/></strong>?</p><form action="${pageContext.request.contextPath}/clientes/desactivar" method="post"><input class="form-check-input" name="id" type="hidden" value="${clienteEliminar.id}"><div class="acciones"><button class="boton peligro" type="submit">Sí, desactivar</button><a class="boton secundario" href="${pageContext.request.contextPath}/clientes#clientes">Cancelar</a></div></form></section></c:if>
+        <c:if test="${not empty mascotaEliminar}"><section class="panel"><h2>Desactivar mascota</h2><p>¿Deseas desactivar a <strong><c:out value="${mascotaEliminar.nombre}"/></strong>?</p><form action="${pageContext.request.contextPath}/mascotas/desactivar" method="post"><input class="form-check-input" name="id" type="hidden" value="${mascotaEliminar.id}"><div class="acciones"><button class="boton peligro" type="submit">Sí, desactivar</button><a class="boton secundario" href="${pageContext.request.contextPath}/mascotas#mascotas">Cancelar</a></div></form></section></c:if>
+        <c:if test="${not empty categoriaEliminar}"><section class="panel"><h2>Desactivar categoría</h2><p>¿Deseas desactivar <strong><c:out value="${categoriaEliminar.nombre}"/></strong>?</p><form action="${pageContext.request.contextPath}/categorias/desactivar" method="post"><input class="form-check-input" name="id" type="hidden" value="${categoriaEliminar.id}"><div class="acciones"><button class="boton peligro" type="submit">Sí, desactivar</button><a class="boton secundario" href="${pageContext.request.contextPath}/categorias#categorias">Cancelar</a></div></form></section></c:if>
+        <c:if test="${not empty servicioEliminar}"><section class="panel"><h2>Desactivar servicio</h2><p>¿Deseas desactivar <strong><c:out value="${servicioEliminar.nombre}"/></strong>?</p><form action="${pageContext.request.contextPath}/servicios/desactivar" method="post"><input class="form-check-input" name="id" type="hidden" value="${servicioEliminar.id}"><div class="acciones"><button class="boton peligro" type="submit">Sí, desactivar</button><a class="boton secundario" href="${pageContext.request.contextPath}/servicios#servicios">Cancelar</a></div></form></section></c:if>
+        <c:if test="${not empty citaEliminar}"><section class="panel"><h2>Cancelar cita</h2><p>¿Deseas cancelar la cita de <strong><c:out value="${citaEliminar.mascota.nombre}"/></strong> del ${citaEliminar.fecha} a las <c:out value="${citaEliminar.hora}"/>?</p><form action="${pageContext.request.contextPath}/citas/cancelar" method="post"><input class="form-check-input" name="id" type="hidden" value="${citaEliminar.id}"><div class="acciones"><button class="boton peligro" type="submit">Sí, cancelar cita</button><a class="boton secundario" href="${pageContext.request.contextPath}/citas#citas">Volver</a></div></form></section></c:if>
+    </main>
+<%@ include file="componentes/footer.jsp" %></body>
 </html>
 

@@ -1,4 +1,8 @@
 package com.petcare.repository;
 
-public interface CitaRepository {
+import com.petcare.model.Cita;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CitaRepository extends JpaRepository<Cita, Long> {
 }
+
